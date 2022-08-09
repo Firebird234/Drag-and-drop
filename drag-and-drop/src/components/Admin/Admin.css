@@ -30,6 +30,7 @@
   height: 50px;
   justify-content: center;
   align-items: center;
+  transition: all 0.4s;
 }
 
 .admin-page__item:hover {
@@ -55,6 +56,14 @@
 .admin-page__addTask_13:hover,
 .admin-page__submint:hover {
   transform: scale(1.1, 1.1);
+}
+
+
+.admin-page__addTask_11:active,
+.admin-page__addTask_12:active,
+.admin-page__addTask_13:active,
+.admin-page__submint:active {
+  transform: scale(.9, .9);
 }
 
 .admin-page__popup {
