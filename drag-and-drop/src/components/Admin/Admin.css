@@ -21,16 +21,34 @@
   flex-direction: column;
 }
 
+
 .admin-page__item {
+  position: relative;
   display: flex;
   flex-direction: column;
   cursor: grab;
   border-radius: 8px;
   width: 100%;
-  height: 50px;
+  min-height: 50px;
   justify-content: center;
   align-items: center;
   transition: all 0.4s;
+  box-sizing: border-box;
+}
+
+.orange {
+  position: relative;
+  background-color: #fc8507;
+  display: flex;
+  flex-direction: column;
+  cursor: grab;
+  border-radius: 8px;
+  width: 100%;
+  min-height: 50px;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s;
+  box-sizing: border-box;
 }
 
 .admin-page__item:hover {
