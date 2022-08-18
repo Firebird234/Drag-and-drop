@@ -203,10 +203,7 @@ export function Admin() {
                            }}
                            className={`admin-page__item ${hoveredItemId === item.id && "padding"}`}
                         >
-                           <div
-                              draggable={false}
-                              className={`admin-page__itemContainer ${hoveredItemId === item.id && "orange"}`}
-                           >
+                           <div className={`admin-page__itemContainer ${hoveredItemId === item.id && "orange"}`}>
                               {card.items.indexOf(item) + 1 + ". " + item.title}
                            </div>
                         </div>

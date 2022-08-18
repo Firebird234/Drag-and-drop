@@ -4,19 +4,16 @@
 
 Небольшая доска задач, типа трелло<br>
 
-
 ### Главная страница
 
 ![Alt-текст](./src/images/A1.PNG "main")
 
-
 ### Стек:
 
-- HTML
-- CSS
-- JavaScript
-- React
-
+-  HTML
+-  CSS
+-  JavaScript
+-  React
 
 ### Запуск проекта
 
@@ -28,4 +25,4 @@
 
 ### Демо:
 
-Будет чуть позже, после доработки
+https://drag-and-drop-nu.vercel.app/
