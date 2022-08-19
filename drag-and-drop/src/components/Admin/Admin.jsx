@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import useFormValidaion from "../../hooks/Validation/Validation";
 import "./Admin.css";
+import del from "../../images/delete.png";
 
 export function Admin() {
    const [cardList, setCardList] = useState([
@@ -135,6 +136,20 @@ export function Admin() {
       setPopup(false);
    }
 
+   function handleDelete(card, item) {
+      const deleteItemIndex = card.items.indexOf(item);
+      card.items.splice(deleteItemIndex, 1);
+      setCardList(
+         cardList.map((el) => {
+            if (el.id === card.id) {
+               return card;
+            } else {
+               return el;
+            }
+         })
+      );
+   }
+
    useEffect(() => {
       const localSt = JSON.parse(localStorage.getItem("Tasks"));
       console.log(localSt);
@@ -203,6 +218,13 @@ export function Admin() {
                            }}
                            className={`admin-page__item ${hoveredItemId === item.id && "padding"}`}
                         >
+                           <button
+                              onClick={(item) => {
+                                 handleDelete(card, item);
+                              }}
+                              type="button"
+                              className="admin-page__delete"
+                           ></button>
                            <div className={`admin-page__itemContainer ${hoveredItemId === item.id && "orange"}`}>
                               {card.items.indexOf(item) + 1 + ". " + item.title}
                            </div>
