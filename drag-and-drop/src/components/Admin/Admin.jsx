@@ -137,7 +137,11 @@ export function Admin() {
    }
 
    function handleDelete(card, item) {
+      // console.log('itemId', item);
       const deleteItemIndex = card.items.indexOf(item);
+      console.log('cardID', card.id);
+
+      console.log('deleteItemIndex', deleteItemIndex);
       card.items.splice(deleteItemIndex, 1);
       setCardList(
          cardList.map((el) => {
@@ -158,7 +162,7 @@ export function Admin() {
 
    useEffect(() => {
       const localSt = JSON.parse(localStorage.getItem("Tasks"));
-      console.log(localSt);
+
       localStorage.setItem("Tasks", JSON.stringify(cardList));
    }, [cardList]);
 
@@ -219,7 +223,8 @@ export function Admin() {
                            className={`admin-page__item ${hoveredItemId === item.id && "padding"}`}
                         >
                            <button
-                              onClick={(item) => {
+                              onClick={() => {
+                                 console.log('item', item);
                                  handleDelete(card, item);
                               }}
                               type="button"
